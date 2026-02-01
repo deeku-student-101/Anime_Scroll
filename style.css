@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+
+@font-face {
+  font-family: 'FK Screamer';
+  src: url('./fonts/fkScreamer.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section{
+    width: 100%;
+    height: 100dvh;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: "FK Screamer";
+    color: white; 
+    margin-top: 200px;
+}
+
+main{
+    width: 100%;
+    height: fit-content;
+}
+
+.heroSection{
+    background: url('heroImg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroSection h1{
+    font-size: 15vw;
+    padding-bottom: 55vh;
+}
+
+.heroSection p{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 2vw; 
+    font-size: 1vw;
+    font-family: 800;
+    color: white;
+    z-index: 100;
+}
+
+.aboutSection{
+    background-color: #366790;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 14vw;
+}
+
+.aboutSection h1{
+    color: #041b2d;
+    line-height: 90%;
+    font-size: 11vw;
+}
+
+.about-img{
+    width: 29vw;
+    height: 34vw;
+    border: 2px solid black;
+}
+
+.stickySection {
+    position: relative;
+    perspective: 1000px;
+    perspective-origin: left center;
+}
+
+.intro{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    z-index: 2;
+}
+
+.intro-col{
+    display: flex;
+    flex: 1;
+}
+
+ .intro-col p{
+    flex: 1;
+    color: white;
+    text-transform: uppercase;
+}
+
+.intro-col p span{
+    display: inline-block;
+}
+
+.intro-col:nth-child(2) p{
+    text-align: right;
+}
+
+.img-1, .img-2, .img-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-2{
+    clip-path: polygon(40% 25%, 60% 25%, 60% 75%, 40% 75%);
+}
+
+.img-3{
+    clip-path: polygon(50% 25%, 50% 25%, 50% 75%, 50% 75%);
+}
+
+.img-3 img{
+    transform-origin: bottom center;
+    transform: scale(3);
+}
+
+/* .copy{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%) rotate(5deg) ;
+    transform-origin: bottom left;
+    
+} */
+
+.copy {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  transform: translate(-50%, -50%) rotateY(75deg) scale(0.6);
+  opacity: 0;
+}
+
+
+.copy h1{
+    font-size: 5vw;
+    text-align: center;
+    text-shadow: 
+     0 2px 8px rgba(0,0,0,0.6),
+     0 0 15px rgba(0,0,0,0.4);
+}
+
+.footerSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+    line-height: 190%;
+    background-color: #CE6813;
+}
+
+
+@media (max-width: 900px) {
+    .heroSection h1{
+        font-size: 20vw;
+    }
+
+    .heroSection p{
+        font-size: 2vw;
+    }
+
+    .aboutSection{
+        padding: 1vw 7vw;
+    }
+
+    .aboutSection h1{
+        font-size: 14vw;
+    }
+
+    .about-img{
+        width: 42vw;
+        height: 64vw;
+    }
+
+     .intro-col p{
+        font-size: 1.8vw;
+        text-transform: uppercase;
+    }
+
+    .footerSection{
+        font-size: 10vw;
+    }
+}
